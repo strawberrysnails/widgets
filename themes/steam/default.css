@@ -1,0 +1,13 @@
+    .steam-widget {
+      padding: 0.5rem 1rem;
+      background: #1b2838;
+      color: #c7d5e0;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      display: inline-block;
+      max-width: 300px;
+      margin: 0.5rem 0;
+    }
+    .steam-widget strong {
+      color: #66c0f4;
+    }

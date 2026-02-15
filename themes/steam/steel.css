@@ -1,0 +1,14 @@
+  .steam-widget {
+    background: linear-gradient(180deg,rgba(121, 121, 121, 1) 0%,rgba(93, 93, 93, 1) 100%);
+    color: #ffffff;
+    font-family: "Segoe UI", sans-serif;
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid #fff;
+    filter: drop-shadow(5px 5px 4px #202020);
+  }
+
+  .steam-widget strong {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000;
+  }
