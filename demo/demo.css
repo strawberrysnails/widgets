@@ -8,6 +8,15 @@ body {
 
 }
 
+a{
+  color:white;
+  transition: all ease-in-out .2s;
+}
+
+a:hover{
+  color:#2a475e
+}
+
 .tabcontent:first-of-type {
   display: block;
 }
