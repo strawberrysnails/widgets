@@ -17,11 +17,11 @@ Display your:
 Paste one of the snippets below where you want the widget to appear.
 ### Last Played
 ```
-<script src="https://strawberrysnails.github.io/widgets/js/steam-widget.js?steamid=YOUR_STEAM_ID_HERE"></script>
+<script src="https://strawberrysnails.github.io/steam-widgets/js/steam-widget.js?steamid=YOUR_STEAM_ID_HERE"></script>
 ```
 ### Most Played
 ```
-<script src="https://strawberrysnails.github.io/widgets/js/steam-widget.js?steamid=YOUR_STEAM_ID_HERE"></script>
+<script src="https://strawberrysnails.github.io/steam-widgets/js/steam-widget.js?steamid=YOUR_STEAM_ID_HERE"></script>
 ```
 
 Replace YOUR_STEAM_ID_HERE with your Steam 64-bit ID.
@@ -46,7 +46,7 @@ You can override styles using CSS:
 # Demo 
 View a live demo and theme examples here:
 
-[https://strawberrysnails.github.io/widgets/demo/](https://strawberrysnails.github.io/widgets/demo/)
+[https://strawberrysnails.github.io/steam-widgets/demo/](https://strawberrysnails.github.io/steam-widgets/demo/)
 
 # Contributing Themes
 Want to submit a theme?
