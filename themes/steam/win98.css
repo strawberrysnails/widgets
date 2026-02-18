@@ -1,4 +1,4 @@
-  .steam-widget {
+  .steam-widget.win98 {
     background: silver;
     font-family: sans-serif;
     font-size: .8em;
@@ -12,12 +12,12 @@
     border-radius: 0; 
   }
 
-  .steam-widget strong{
+  .steam-widget.win98 strong{
     color:#0a0a0a;
   }
 
 
-.steam-widget::before {
+.steam-widget.win98::before {
   content: "steam.exe";
   display: block;
   background: linear-gradient(90deg,navy,#1084d0);
@@ -25,4 +25,10 @@
   padding: 3px 2px 3px 3px;
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+.steam-widget.win98::after {
+  content: "X";
+    display: block;
+      color: #fff;
 }

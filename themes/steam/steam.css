@@ -1,0 +1,70 @@
+    /* Base widget */    
+
+        .steam-widget.default {
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      display: inline-block;
+      max-width: 300px;
+      margin: 0.5rem 0;
+    }
+/* Default Theme */
+    .steam-widget.default {
+      background: #1b2838;
+      color: #c7d5e0;
+    }
+    
+    .steam-widget.default strong {
+      color: #66c0f4;
+    }
+/* Win98 Theme */
+      .steam-widget.win98 {
+    background: silver;
+    font-family: sans-serif;
+    font-size: .8em;
+    box-shadow:0;
+    color: #222;
+    text-align: left;
+    padding: 0;
+    border: 2px solid #fff;      
+    border-right-color: #808080; 
+    border-bottom-color: #808080; 
+    border-radius: 0; 
+  }
+
+  .steam-widget.win98 strong{
+    color:#0a0a0a;
+  }
+
+
+.steam-widget.win98::before {
+  content: "steam.exe";
+  display: block;
+  background: linear-gradient(90deg,navy,#1084d0);
+  color: #fff;
+  padding: 3px 2px 3px 3px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.steam-widget.win98::after {
+  content: "X";
+    display: block;
+      color: #fff;
+}
+
+/* Steel Theme */
+      .steam-widget.steel {
+    background: linear-gradient(180deg,rgba(121, 121, 121, 1) 0%,rgba(93, 93, 93, 1) 100%);
+    color: #ffffff;
+    font-family: "Segoe UI", sans-serif;
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid #fff;
+    filter: drop-shadow(5px 5px 4px #202020);
+  }
+
+  .steam-widget.steel strong {
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000;
+  }

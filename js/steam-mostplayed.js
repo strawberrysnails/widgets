@@ -4,11 +4,6 @@
 
   const theme = script.className || 'default';
 
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = `https://strawberrysnails.github.io/widgets/themes/steam/${theme}.css`;
-  document.head.appendChild(link);
-
   const params = new URL(script.src).searchParams;
   const steamId = params.get("steamid");
   if (!steamId) {
@@ -17,7 +12,7 @@
   }
 
   const div = document.createElement("div");
-  div.className = "steam-widget";
+  div.className = `steam-widget ${theme}`;
   div.textContent = "Loading most played game...";
   script.parentNode.insertBefore(div, script.nextSibling);
 
