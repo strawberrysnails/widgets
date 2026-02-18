@@ -1,0 +1,83 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0b1a2a;
+  color: #c7d5e0;
+  margin: auto;
+  max-width: 1000px;
+
+}
+
+.tabcontent:first-of-type {
+  display: block;
+}
+
+.tab {
+  overflow: hidden;
+  border-bottom: 2px solid #1b2838;
+  background-color: #131e2b;
+  border-radius: 6px 6px 0 0;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+}
+
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 12px 16px;
+  transition: 0.3s;
+  font-size: 16px;
+  color: #c7d5e0;
+  font-weight: bold;
+}
+
+.tab button:hover {
+  background-color: #2a475e;
+}
+
+.tab button.active {
+  background-color: #2a475e;
+  border-bottom: 2px solid #66c0f4;
+}
+
+.tabcontent {
+  display: none;
+  padding: 12px;
+  border: 1px solid #1b2838;
+  border-top: none;
+  background-color: #2a475e;
+  border-radius: 0 0 6px 6px;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
+}
+
+pre {
+  position: relative;
+  padding-top: 0rem;
+  padding-left: 1rem;
+  background: #ffffff;
+  background-color: #272c30;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+
+.copy-button {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #f0f0f0;
+  color: #333;
+}
+
+.copy-button:hover {
+  background: #e0e0e0;
+}

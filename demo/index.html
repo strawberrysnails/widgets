@@ -4,58 +4,90 @@
   <meta charset="UTF-8">
   <title>Steam Widget Demo</title>
   <link rel="stylesheet" href="https://strawberrysnails.github.io/widgets/themes/steam.css">
-  <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; }
-    .theme-button { margin: 0.25rem; padding: 0.5rem 1rem; cursor: pointer; }
-    .widget-container { margin-top: 2rem; }
-    pre { background: #f0f0f0; padding: 1rem; border-radius: 8px; }
-  </style>
+   <link rel="stylesheet" href="demo.css">
 </head>
 <body>
-  <h1>Steam Widget Demo</h1>
+  <h1>Steam Widgets</h1>
 
-  <div>
-    <strong>Select Theme:</strong>
-    <button class="theme-button" data-theme="default">Default</button>
-    <button class="theme-button" data-theme="win98">Win98</button>
-    <button class="theme-button" data-theme="steel">Steel</button>
-    <button class="theme-button" data-theme="terminal">Terminal</button>
-  </div>
+ <div class="tab">
+  <button class="tablinks active" onclick="openCity(event, 'Default')">Default</button>
+  <button class="tablinks" onclick="openCity(event, 'Steel')">Steel</button>
+  <button class="tablinks" onclick="openCity(event, 'Win98')">Win98</button>
+    <button class="tablinks" onclick="openCity(event, 'Terminal')">Terminal</button>
+</div>
 
-  <div class="widget-container">
-    <h2>Live Preview</h2>
-    <div id="widget-target"></div>
-  </div>
+<div id="Default" class="tabcontent">
 
-  <h2>Embed Code</h2>
-  <pre id="embed-code"></pre>
+<script
+  src="https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=76561198243819620"
+  class="default">
+</script>
 
-  <script>
-    const steamId = '76561198243819620'; // Demo Steam ID
-    const widgetTarget = document.getElementById('widget-target');
-    const embedCode = document.getElementById('embed-code');
+<pre>
+  <code>
+&lt;script
+  src="https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=YOUR_STEAM_ID"
+  class="default"&gt;
+&lt;/script&gt;
+  </code>
+</pre>
 
-    function loadWidget(theme) {
-      // Remove old widget
-      widgetTarget.innerHTML = '';
+</div>
 
-      // Create new script tag
-      const script = document.createElement('script');
-      script.src = `https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=${steamId}`;
-      script.className = theme;
-      widgetTarget.appendChild(script);
+<div id="Steel" class="tabcontent">
 
-      // Update embed code
-      embedCode.textContent = `<script src="https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=${steamId}" class="${theme}"></script>`;
-    }
+<script
+  src="https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=76561198243819620"
+  class="steel">
+</script>
 
-    // Load default on page load
-    loadWidget('default');
+<pre>
+  <code>
+&lt;script
+  src="https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=YOUR_STEAM_ID"
+  class="steel"&gt;
+&lt;/script&gt;
+  </code>
+</pre>
 
-    // Add theme button events
-    document.querySelectorAll('.theme-button').forEach(button => {
-      button.addEventListener('click', () => loadWidget(button.dataset.theme));
-    });
-  </script>
+</div>
+
+<div id="Win98" class="tabcontent">
+
+<script
+  src="https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=76561198243819620"
+  class="win98">
+</script>
+
+<pre>
+  <code>
+&lt;script
+  src="https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=YOUR_STEAM_ID"
+  class="win98"&gt;
+&lt;/script&gt;
+  </code>
+</pre>
+
+</div>
+
+<div id="Terminal" class="tabcontent">
+
+<script
+  src="https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=76561198243819620"
+  class="terminal">
+</script>
+
+<pre>
+  <code>
+&lt;script
+  src="https://strawberrysnails.github.io/widgets/js/steam-lastplayed.js?steamid=YOUR_STEAM_ID"
+  class="terminal"&gt;
+&lt;/script&gt;
+  </code>
+</pre>
+
+</div>
+
+<script src="demo.js"></script>
 </body>
 </html>
