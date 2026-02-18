@@ -9,7 +9,7 @@ Display your:
 ⚠️ Your Steam profile must be public for this to work.
 
 ## Example:
-![Steam Widget Demo]()
+![Steam Widget Demo](https://github.com/strawberrysnails/steam-widgets/blob/main/demo/screenshot.png)
 
 # How to use
 ## 1. Simple installation:
