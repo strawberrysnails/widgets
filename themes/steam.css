@@ -1,70 +1,125 @@
-    /* Base widget */    
-
-        .steam-widget.default {
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      font-family: Arial, sans-serif;
-      display: inline-block;
-      max-width: 300px;
-      margin: 0.5rem 0;
-    }
+/* Base widget */
+.steam-widget {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  display: inline-block;
+  max-width: 300px;
+  margin: 0.5rem 0;
+}
 /* Default Theme */
-    .steam-widget.default {
-      background: #1b2838;
-      color: #c7d5e0;
-    }
-    
-    .steam-widget.default strong {
-      color: #66c0f4;
-    }
+.steam-widget.default {
+  background: #1b2838;
+  color: #c7d5e0;
+}
+
+.steam-widget.default strong {
+  color: #66c0f4;
+}
 /* Win98 Theme */
-      .steam-widget.win98 {
-    background: silver;
-    font-family: sans-serif;
-    font-size: .8em;
-    box-shadow:0;
-    color: #222;
-    text-align: left;
-    padding: 0;
-    border: 2px solid #fff;      
-    border-right-color: #808080; 
-    border-bottom-color: #808080; 
-    border-radius: 0; 
-  }
+.steam-widget.win98 {
+  background: silver;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  box-shadow: 0;
+  color: #222;
+  text-align: left;
+  border: 2px solid #fff;
+  border-right-color: #808080;
+  border-bottom-color: #808080;
+  border-radius: 0;
+}
 
-  .steam-widget.win98 strong{
-    color:#0a0a0a;
-  }
-
+.steam-widget.win98 strong {
+  color: #0a0a0a;
+}
 
 .steam-widget.win98::before {
   content: "steam.exe";
   display: block;
-  background: linear-gradient(90deg,navy,#1084d0);
+  background: linear-gradient(90deg, navy, #1084d0);
   color: #fff;
   padding: 3px 2px 3px 3px;
   font-weight: bold;
   font-size: 0.9rem;
 }
 
-.steam-widget.win98::after {
-  content: "X";
-    display: block;
-      color: #fff;
+/* Steel Theme */
+.steam-widget.steel {
+  background: linear-gradient(
+    180deg,
+    rgba(121, 121, 121, 1) 0%,
+    rgba(93, 93, 93, 1) 100%
+  );
+  color: #ffffff;
+  font-family: "Segoe UI", sans-serif;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 1px solid #fff;
+  filter: drop-shadow(5px 5px 4px #202020);
 }
 
-/* Steel Theme */
-      .steam-widget.steel {
-    background: linear-gradient(180deg,rgba(121, 121, 121, 1) 0%,rgba(93, 93, 93, 1) 100%);
-    color: #ffffff;
-    font-family: "Segoe UI", sans-serif;
-    border-radius: 12px;
-    padding: 1rem;
-    border: 1px solid #fff;
-    filter: drop-shadow(5px 5px 4px #202020);
-  }
+.steam-widget.steel strong {
+  color: #ffffff;
+  text-shadow: 1px 1px 2px #000;
+}
 
-  .steam-widget.steel strong {
-    color: #ffffff;
-    text-shadow: 1px 1px 2px #000;
-  }
+/* Terminal */
+.steam-widget.terminal {
+  background: #000;
+  color: #00ff66;
+  font-family: "Courier New", monospace;
+  border: 2px solid #00ff66;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 0 10px #00ff66;
+  overflow: hidden;
+}
+
+.steam-widget.terminal::before {
+  content: "C:\\steam\\hrs.txt";
+  display: block;
+  background: #001a00;
+  border-bottom: 1px solid #00ff66;
+  padding: 4px 8px;
+  margin: -1rem -1rem 1rem -1rem;
+  font-size: 0.85rem;
+  color: #00ff66;
+}
+
+.steam-widget.terminal strong {
+  color: #00ff66;
+  text-shadow: 0 0 5px #00ff66;
+}
+
+.steam-widget.terminal br {
+  content: "";
+}
+
+.steam-widget.terminal {
+  line-height: 1.5;
+}
+
+.steam-widget.terminal strong:first-of-type::before {
+  content: "> ";
+  font-weight: normal;
+}
+
+.steam-widget.terminal strong:last-of-type::before {
+  content: "> ";
+  font-weight: normal;
+}
+
+.steam-widget.terminal::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,102,0.05) 0px,
+    rgba(0,255,102,0.05) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+}
