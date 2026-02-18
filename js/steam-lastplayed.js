@@ -2,6 +2,15 @@
   const script = document.currentScript;
   if (!script) return;
 
+   const CSS_URL = "https://strawberrysnails.github.io/steam-widgets/themes/steam.css";
+
+  if (!document.querySelector(`link[href="${CSS_URL}"]`)) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = CSS_URL;
+    document.head.appendChild(link);
+  }
+
   const theme = script.className || 'default';
 
   const params = new URL(script.src).searchParams;
@@ -28,7 +37,7 @@ const WORKER_URL = "https://api.strawberryjam.workers.dev/api/steam-lastplayed";
 
     div.innerHTML = `
       <strong>Last played game:</strong> ${data.name}<br>
-      <strong>Hours played:</strong> ${data.hours}hrs
+      <strong>Hours played:</strong> ${data.hours} hours
     `;
   } catch (err) {
     div.textContent = "Error fetching Steam data";
