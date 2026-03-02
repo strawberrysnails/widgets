@@ -27,7 +27,7 @@
   }
   script.parentNode.insertBefore(span, script.nextSibling);
 
-  const WORKER_URL = "https://api.strawberryjam.workers.dev/api/steam-lastplayed";
+const WORKER_URL = "https://api.strawberryjam.workers.dev/api/steam-lastplayed";
   try {
     const res = await fetch(`${WORKER_URL}?steamid=${steamId}`);
     const data = await res.json();
@@ -35,7 +35,11 @@
       span.textContent = "No recent games";
       return;
     }
-    span.textContent = `Last played: ${data.name} — ${data.hours} hours`;
+    if (theme) {
+      span.innerHTML = `<strong>Last played game:</strong> ${data.name}<br><strong>Hours played:</strong> ${data.hours} hours`;
+    } else {
+      span.textContent = `Last played: ${data.name} — ${data.hours} hours`;
+    }
   } catch (err) {
     span.textContent = "Error fetching Steam data";
     console.error(err);
