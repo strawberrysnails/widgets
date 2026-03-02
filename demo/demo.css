@@ -1,10 +1,11 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: monospace;
   background: #0b1a2a;
   color: #c7d5e0;
   margin: auto;
   max-width: 1000px;
+  font-size: 15px;
 
 }
 

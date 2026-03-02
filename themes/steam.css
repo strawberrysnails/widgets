@@ -1,3 +1,7 @@
+/* No Styles */
+.steam-widget {
+background-color: transparent;
+}
 /* Base widget */
 .steam-widget {
   padding: 0.5rem 1rem;
@@ -8,6 +12,7 @@
   margin: 0.5rem 0;
   line-height: 1.5rem;
 }
+
 /* Default Theme */
 .steam-widget.default {
   background: #1b2838;
