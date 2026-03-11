@@ -38,7 +38,7 @@ const WORKER_URL = "https://api.strawberryjam.workers.dev/api/steam-lastplayed";
     if (theme) {
       span.innerHTML = `<strong>Last played game:</strong> ${data.name}<br><strong>Hours played:</strong> ${data.hours} hours`;
     } else {
-      span.textContent = `Last played: ${data.name} — ${data.hours} hours`;
+      span.textContent = `${data.name} - ${data.hours}`;
     }
   } catch (err) {
     span.textContent = "Error fetching Steam data";
