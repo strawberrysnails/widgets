@@ -12,11 +12,11 @@
 <p>Replace <b><i>YOUR_STEAM_ID</i></b> with your Steam 64-bit ID. Find your Steam ID here: <a target="_blank" rel="noopener noreferrer" href="https://steamid.io/">steamid.io/</a></p>
 
  <div class="tab">
-  <button class="tablinks active" onclick="openCity(event, 'Default')">Default</button>
-      <button class="tablinks" onclick="openCity(event, 'NoStyles')">Plain Text</button>
-  <button class="tablinks" onclick="openCity(event, 'Steel')">Steel</button>
+        <button class="tablinks" onclick="openCity(event, 'NoStyles')">Plain Text</button>
+  <button class="tablinks active" onclick="openCity(event, 'Default')">Steam</button>
   <button class="tablinks" onclick="openCity(event, 'Win98')">Win98</button>
     <button class="tablinks" onclick="openCity(event, 'Terminal')">Terminal</button>
+    <button class="tablinks" onclick="openCity(event, 'iFrame')">iFrame</button>
 </div>
 
 <div id="Default" class="tabcontent">
@@ -74,38 +74,6 @@
   <code>
 &lt;script
   src="https://strawberrysnails.github.io/steam-widgets/js/steam-mostplayed.js?steamid=YOUR_STEAM_ID"
-&lt;/script&gt;
-  </code>
-</pre>
-
-</div>
-
-<div id="Steel" class="tabcontent">
-
-<script
-  src="https://strawberrysnails.github.io/steam-widgets/js/steam-lastplayed.js?steamid=76561198243819620"
-  class="steel">
-</script>
-
-<pre>
-  <code>
-&lt;script
-  src="https://strawberrysnails.github.io/steam-widgets/js/steam-lastplayed.js?steamid=YOUR_STEAM_ID"
-  class="steel"&gt;
-&lt;/script&gt;
-  </code>
-</pre>
-
-<script
-  src="https://strawberrysnails.github.io/steam-widgets/js/steam-mostplayed.js?steamid=76561198243819620"
-  class="steel">
-</script>
-
-<pre>
-  <code>
-&lt;script
-  src="https://strawberrysnails.github.io/steam-widgets/js/steam-mostplayed.js?steamid=YOUR_STEAM_ID"
-  class="steel"&gt;
 &lt;/script&gt;
   </code>
 </pre>
@@ -175,6 +143,130 @@
 </pre>
 
 </div>
+
+<div id="iFrame" class="tabcontent">
+
+<p>This is a version I created using iFrames so that <b>Neocities users with free accounts can embed the widget as well!</b></p>
+<p>Please note that if you have a supporter account, it is better and more stable to use the javascript version.</p>
+<p>Themes are unavailable for this version, however, you can customize it as much as you want.</p>
+<h3>Unstyled:</h3>
+<iframe
+  src="https://strawberrysnails.github.io/steam-widgets/iframe-ver/?steamid=76561198243819620&type=lastplayed"
+  frameborder="0"
+  scrolling="no"
+  width="400"
+  height="30"
+  allowtransparency="true"
+  title="Steam Last Played"
+></iframe>
+
+<pre>
+  <code>
+&lt;iframe
+  src="https://strawberrysnails.github.io/steam-widgets/iframe-ver/?steamid=YOUR_STEAM_ID&type=lastplayed"
+  frameborder="0"
+  scrolling="no"
+  width="400"
+  height="30"
+  allowtransparency="true"
+  title="Steam Last Played"
+ &gt;&lt;/iframe&gt;
+  </code>
+</pre>
+
+<iframe
+  src="https://strawberrysnails.github.io/steam-widgets/iframe-ver/?steamid=76561198243819620&type=mostplayed"
+  frameborder="0"
+  scrolling="no"
+  width="400"
+  height="30"
+  allowtransparency="true"
+  title="Steam Last Played"
+></iframe>
+
+<pre>
+  <code>
+&lt;iframe
+  src="https://strawberrysnails.github.io/steam-widgets/iframe-ver/?steamid=YOUR_STEAM_ID&type=mostplayed"
+  frameborder="0"
+  scrolling="no"
+  width="400"
+  height="30"
+  allowtransparency="true"
+  title="Steam Most Played"
+ &gt;&lt;/iframe&gt;
+  </code>
+</pre>
+
+<h3>Styling Examples:</h3>
+
+<p>You can style the widget by wrapping it in a div, or by passing style params in the URL.</p>
+<h4>Available URL parameters:</h4>
+<ul>
+  <li><code>steamid</code> — your Steam ID (required)</li>
+  <li><code>type</code> — <code>lastplayed</code> or <code>mostplayed</code></li>
+  <li><code>color</code> — text color, e.g. <code>%23ff0000</code> (note: encode <code>#</code> as <code>%23</code>)</li>
+  <li><code>font-family</code> — e.g. <code>Arial</code>, <code>Georgia</code>, <code>monospace</code></li>
+  <li><code>font-size</code> — e.g. <code>14px</code></li>
+  <li><code>center</code> — set to <code>1</code> to center the text</li>
+</ul>
+<p>For borders, backgrounds, and other container styles, wrap the iframe in a <code>&lt;div&gt;</code> and style that instead!</p>
+
+<h4>With a border and background:</h4>
+<div style="border: 1px solid #c8a2c8; border-radius: 6px; padding: 4px 10px; display: inline-block; background: #1a1a2e;">
+  <iframe
+    src="https://strawberrysnails.github.io/steam-widgets/iframe-ver/?steamid=76561198243819620&type=lastplayed&color=%23c8a2c8&font-family=Arial&font-size=14px"
+    frameborder="0"
+    scrolling="no"
+    width="300"
+    height="35"
+    allowtransparency="true"
+    title="Steam Last Played"
+  ></iframe>
+</div>
+<pre><code>&lt;div style="border: 1px solid #c8a2c8;
+  border-radius: 6px;
+  padding: 4px 10px;
+  display: inline-block;
+  background: #1a1a2e;"&gt;
+  &lt;iframe
+    src="https://strawberrysnails.github.io/steam-widgets/iframe-ver/?steamid=YOUR_STEAM_ID&amp;type=lastplayed&amp;color=%23c8a2c8&amp;font-family=monospace&amp;font-size=14px"
+    frameborder="0"
+    scrolling="no"
+    width="380"
+    height="40"
+    allowtransparency="true"
+    title="Steam Last Played"
+  &gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+
+<h4>Centered with custom font:</h4>
+<div style="border: 1px dashed #888; padding: 6px; text-align: center;">
+  <iframe
+    src="https://strawberrysnails.github.io/steam-widgets/iframe-ver/?steamid=76561198243819620&type=mostplayed&color=%23ffffff&font-family=CourierNew&font-size=13px&center=1"
+    frameborder="0"
+    scrolling="no"
+    width="100%"
+    height="30"
+    allowtransparency="true"
+    title="Steam Most Played"
+  ></iframe>
+</div>
+<pre><code>&lt;div style="border: 1px dashed #888; padding: 6px; text-align: center;"&gt;
+  &lt;iframe
+    src="https://strawberrysnails.github.io/steam-widgets/iframe-ver/?steamid=YOUR_STEAM_ID&amp;type=mostplayed&amp;color=%23ffffff&amp;font-family=CourierNew&amp;font-size=13px&amp;center=1"
+    frameborder="0"
+    scrolling="no"
+    width="100%"
+    height="30"
+    allowtransparency="true"
+    title="Steam Most Played"
+  &gt;&lt;/iframe&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+
+
 <br>
 <footer style="text-align: center;">Created by <a href="https://strawberrysnails.github.io">strawberrysnails</a> &#9825; <a href="https://github.com/strawberrysnails/steam-widgets">Source Code</a></footer>
 <script src="demo.js"></script>

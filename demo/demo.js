@@ -20,23 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".tablinks").click();
 });
 
+// copy button
+document.querySelectorAll('pre code').forEach((block) => {
+  const button = document.createElement('button');
+  button.textContent = 'copy';
+  button.style.cssText = 'position:absolute;top:6px;right:6px;padding:2px 8px;font-size:12px;cursor:pointer;';
+  
+  const pre = block.parentElement;
+  pre.style.position = 'relative';
+  pre.appendChild(button);
 
-// 
-
-document.querySelectorAll("pre > code").forEach((codeBlock) => {
-  const pre = codeBlock.parentNode;
-
-  const button = document.createElement("button");
-  button.className = "copy-button";
-  button.type = "button";
-  button.textContent = "Copy";
-
-  button.addEventListener("click", () => {
-    navigator.clipboard.writeText(codeBlock.innerText).then(() => {
-      button.textContent = "Copied!";
-      setTimeout(() => (button.textContent = "Copy"), 1500);
+  button.addEventListener('click', () => {
+    navigator.clipboard.writeText(block.innerText).then(() => {
+      button.textContent = 'copied!';
+      setTimeout(() => button.textContent = 'copy', 2000);
     });
   });
-
-  pre.appendChild(button);
 });

@@ -70,7 +70,7 @@ pre {
   background: #ffffff;
   background-color: #272c30;
   border-radius: 6px;
-  overflow: hidden;
+  overflow: scroll;
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
