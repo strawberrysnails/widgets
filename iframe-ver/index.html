@@ -2,10 +2,6 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: transparent; }
-  </style>
 </head>
 <body>
   <script>
@@ -19,20 +15,11 @@
       const fontFamily = params.get("font-family") || "inherit";
       const fontSize   = params.get("font-size")   || "inherit";
       const center     = params.get("center")      === "1";
-      const theme      = params.get("theme")       === "1";
-
-      if (theme) {
-        const link = document.createElement("link");
-        link.rel  = "stylesheet";
-        link.href = "https://strawberrysnails.github.io/steam-widgets/themes/steam.css";
-        document.head.appendChild(link);
-      }
 
       const span = document.createElement("span");
       Object.assign(span.style, { color, fontFamily, fontSize });
       if (center) { span.style.display = "block"; span.style.textAlign = "center"; }
-      if (theme)  span.className = "steam-widget steam";
-      span.textContent = type === "mostplayed" ? "Loading most played game..." : "Loading last played game...";
+      span.textContent = "Loading...";
       document.body.appendChild(span);
 
       const WORKER_URLS = {
@@ -41,22 +28,15 @@
       };
 
       const LABELS = {
-        lastplayed: { heading: "Last played game", plain: "Last played" },
-        mostplayed: { heading: "Most played game", plain: "Most played" }
+        lastplayed: "Last played",
+        mostplayed: "Most played"
       };
 
       try {
-        const res   = await fetch(`${WORKER_URLS[type]}?steamid=${steamId}`);
-        const data  = await res.json();
-        const label = LABELS[type];
-
+        const res  = await fetch(`${WORKER_URLS[type]}?steamid=${steamId}`);
+        const data = await res.json();
         if (!data || !data.name) { span.textContent = "No data available"; return; }
-
-        if (theme) {
-          span.innerHTML = `<strong>${label.heading}:</strong> ${data.name}<br><strong>Hours played:</strong> ${data.hours} hours`;
-        } else {
-          span.textContent = `${label.plain}: ${data.name} — ${data.hours} hours`;
-        }
+        span.textContent = `${LABELS[type]}: ${data.name} - ${data.hours}`;
       } catch (err) {
         span.textContent = "Error fetching Steam data";
         console.error(err);
